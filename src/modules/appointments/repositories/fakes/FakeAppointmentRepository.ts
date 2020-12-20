@@ -1,4 +1,5 @@
 import { v4 as uuid_v4 } from "uuid";
+import { isEqual } from 'date-fns';
 
 import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
 
@@ -11,7 +12,7 @@ class FakeAppointmentsRepository implements IAppointmentsRepository {
 
   public async findByDate(date: Date): Promise<Appointment | undefined> {
     const findAppointment = this.appointments.find(
-      appointment => appointment.date === date,
+      appointment => isEqual(appointment.date, date),
     );
 
     return findAppointment;
