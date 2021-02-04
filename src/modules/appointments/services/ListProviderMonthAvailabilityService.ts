@@ -3,8 +3,6 @@ import { getDaysInMonth, getDate } from 'date-fns';
 
 import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 
-import User from '@modules/users/infra/typeorm/entities/User';
-
 interface Request {
   provider_id: string;
   month: number;
@@ -34,7 +32,7 @@ class ListProviderMonthAvailabilityService {
 
     const eachDayArray = Array.from(
       { length: numberOfDaysInMonth },
-      (_, index) => index + 1 ,
+      (_, index) => index + 1,
     );
 
     const availability = eachDayArray.map(day => {
