@@ -22,13 +22,4 @@ export default class AppointmentsController {
 
     return response.status(201).json(appointment);
   }
-
-  public async index(request: Request, response: Response): Promise<Response> {
-
-    const createAppointmet = container.resolve(CreateAppointmentServices);
-
-    // const appointments = await createAppointmet.execute({});
-
-    return response.send();
-  }
 }

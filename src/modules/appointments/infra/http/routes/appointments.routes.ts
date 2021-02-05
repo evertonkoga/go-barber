@@ -8,8 +8,6 @@ const appointmentsController = new AppointmentsController();
 
 appointmentsRoutes.use(ensureAuthenticated);
 
-appointmentsRoutes.get('/', appointmentsController.index);
-
 appointmentsRoutes.post('/', appointmentsController.create);
 
 export default appointmentsRoutes;
