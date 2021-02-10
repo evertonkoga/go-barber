@@ -5,6 +5,13 @@ build/
 
 coverage/*
 
+.env
+.idea/*
+.vscode/*
+build/*
+node_modules/*
+ormconfig.json
+
 tmp/*
 !tmp/.gitkeep
 
