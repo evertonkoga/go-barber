@@ -2,6 +2,7 @@ node_modules
 .vscode/
 .idea/
 build/
+dist/
 
 coverage/*
 
